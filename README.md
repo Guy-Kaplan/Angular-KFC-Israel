@@ -1,6 +1,6 @@
 # Angular-KFC-Israel
 
-A website I made for fictional KFC Israel, written in Angular.<br>
+A website I made for **fictional** KFC Israel, written in Angular.<br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 All KFC information, images, terms, and videos are copyrights of Kentucky Fried Chicken (KFC) &copy;<br>
