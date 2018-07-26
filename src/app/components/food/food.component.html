@@ -1,0 +1,19 @@
+<img #preview width="300"> <!-- *ngIf="preview.src!=''" -->
+<h1><mat-icon>fastfood</mat-icon> Our food <mat-icon>fastfood</mat-icon></h1>
+<br>
+<div *ngFor="let p of foods">
+    <!-- <h3>{{p.pic}}</h3> -->
+    <app-thumbnail
+        source="./assets/images/{{p.pic}}"
+        side="150"
+        (enter)="preview.src=$event"
+        (leave)="preview.src=''"></app-thumbnail>
+    <h3>{{p.name}}</h3>
+    <h3>{{p.price | currency: 'ILS'}}</h3>
+</div>
+<br>
+<!-- <app-thumbnail source="/assets/images/home.jpg" side="100">
+</app-thumbnail> -->
+<!-- <app-thumbnail source="/assets/images/products/{{p.pic}}.jpg" side="50">
+</app-thumbnail> -->
+<br>

@@ -1,0 +1,41 @@
+h1{
+    font-size: 33px;
+    text-decoration: underline;
+    text-align: center;
+}
+h2{
+    font-size: 20px;
+    direction: ltr;
+    width: 100%;
+}
+div{
+    width: 100%;
+    float: left;
+    text-align: left;
+    /* position: relative; */
+    /* border: solid; */
+    padding: 5px;
+    padding-left: 20px;
+    /* width: 50%; */
+}
+/*NOT FOR M.D:*/
+/* input, button, textarea{
+    width: 400px;
+    font-size: large;
+    margin: 10px;
+} */
+span{
+    margin: 35px;
+    text-align: left;
+    color: red;
+    position: absolute;
+}
+mat-form-field, button{
+    width: 400px;
+    font-size: x-large;
+}
+/*NOT FOR M.D:*/
+/* .ng-dirty.ng-invalid:not(form){
+    background-color: pink;
+    border: 2px solid red;
+} */

@@ -1,0 +1,11 @@
+h1{
+    font-size: 33px;
+    text-decoration: underline;
+}
+p{
+    text-align: left;
+    font-size: 20px;
+}
+div{
+    padding: 10px;
+}

@@ -1,0 +1,65 @@
+<h1><mat-icon>contact_mail</mat-icon> Contact Us <mat-icon>contact_mail</mat-icon></h1>
+<!-- <div>
+    <h2><u>Address</u>: Horev St. 38 Haifa, Israel</h2>
+    <h2><u>Email</u>: contact@kfc.co.il</h2>
+    <h2><u>Phone</u>: 1-800-775544</h2>
+    <h4>Opening Hours:</h4>
+    SUN: 8:00AM - 9:30PM
+    <br> MON - WED: 9:00AM - 9:30PM
+    <br> THR: 9:00AM - 10:30PM
+    <br> FRI - SAT: 8:00AM - 10:30PM
+    <br>
+</div> -->
+<form (ngSubmit)="send()" #myForm="ngForm">
+    <div>
+        <mat-form-field>
+        <input matInput type="text" name="firstName"
+        [(ngModel)]="contact.firstName" placeholder="First Name"
+        autofocus required #firstName="ngModel">
+        </mat-form-field>
+        <span *ngIf="firstName.dirty&&firstName.invalid">
+            Missing First Name
+        </span>
+    </div>
+    <div>
+        <mat-form-field>
+        <input matInput type="text" name="lastName"
+        [(ngModel)]="contact.lastName" placeholder="Last Name"
+        required #lastName="ngModel">
+        </mat-form-field>
+        <span *ngIf="lastName.dirty&&lastName.invalid">
+            Missing Last Name
+        </span>
+    </div>
+    <div>
+        <mat-form-field>
+        <input matInput type="email" name="email"
+        [(ngModel)]="contact.email" placeholder="Email"
+        email #email="ngModel">
+        </mat-form-field>
+        <span *ngIf="email.dirty&&email.invalid">
+            Invalid Email
+        </span>
+    </div>
+    <div>
+        <mat-form-field>
+        <input matInput type="text" name="message"
+        [(ngModel)]="contact.message" placeholder="Message"
+        required #message="ngModel">
+        </mat-form-field>
+        <span *ngIf="message.dirty&&message.invalid">
+            Missing Message
+        </span>
+        </div>
+    <div>
+        <button mat-button [disabled]="myForm.form.invalid">
+            Send&nbsp;&nbsp;<mat-icon>send</mat-icon>
+        </button>
+    </div>
+    <div>
+        <!-- <input type="reset" value="Reset"> -->
+        <button mat-button type="reset">
+            Reset&nbsp;&nbsp;<mat-icon>cached</mat-icon>
+        </button>
+    </div>
+</form>

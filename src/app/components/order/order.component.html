@@ -1,0 +1,73 @@
+<h1><mat-icon>menu</mat-icon> Order <mat-icon>menu</mat-icon></h1>
+<!-- reorder -->
+<br>
+<form (ngSubmit)="send()" #myForm="ngForm">
+<div>
+    <span>City:</span>
+    &nbsp;
+    <select name="city" [(ngModel)]="order.city" required>
+        <option value="Tel Aviv">Tel Aviv</option>
+        <option value="Rishon Lezion">Rishon Lezion</option>
+        <option value="Ashdod">Ashdod</option>
+        <option value="Haifa">Haifa</option>
+        <option value="Jerusalem">Jerusalem</option>
+    </select>
+    <br><br>
+    <span>Meal type:</span>
+    &nbsp;
+    <select name="mealType" [(ngModel)]="order.mealType" required>
+        <option value="Bucket Meal">Bucket Meal</option>
+        <option value="2 Pieces Meal">2 Pieces Meal</option>
+        <option value="3 Pieces Meal">3 Pieces Meal</option>
+    </select>
+    <br><br>
+    <span>Number of meals:</span>
+    &nbsp;
+    <select name="numOfMeals" [(ngModel)]="order.numOfMeals" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+    <br><br>
+    <span>Side:</span>
+    &nbsp;
+    <select name="side" [(ngModel)]="order.side" required>
+        <option value="French Fries">French Fries</option>
+        <option value="Potato Wadges">Potato Wadges</option>
+        <option value="Mashed Potatoes">Mashed Potatoes</option>
+        <option value="Pot Pie">Pot Pie</option>
+        <option value="Green Beans">Green Beans</option>
+        <option value="Cole Slaw">Cole Slaw</option>
+    </select>
+    <br><br>
+    <span>Drink:</span>
+    &nbsp;
+    <select name="drink" [(ngModel)]="order.drink" required>
+        <option value="Mineral Water">Mineral Water</option>
+        <option value="Cola">Cola</option>
+        <option value="Diet Cola">Diet Cola</option>
+        <option value="Cola Zero">Cola Zero</option>
+        <option value="Sprite">Sprite</option>
+        <option value="Diet Sprite">Diet Sprite</option>
+        <option value="Fanta">Fanta</option>
+        <option value="Diet Fanta">Diet Fanta</option>
+        <option value="Orange Juice">Orange Juice</option>
+        <option value="Grape Juice">Grape Juice</option>
+        <option value="Apple Juice">Apple Juice</option>
+
+    </select>
+    <br><br>
+    <span>Comments:</span>
+    <br>
+    <textarea name="comments" [(ngModel)]="order.comments"
+    placeholder="Enter comments here" rows="4" cols="50"></textarea>
+    <br><br>
+    <button [disabled]="myForm.form.invalid">Submit</button>
+    <br><br>
+    <!-- <input type="reset" value="Reset"> -->
+    <br><br>
+</div>
+</form>
